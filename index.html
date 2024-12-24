@@ -29,6 +29,16 @@
 </head>
 
 <body>
+    <!-- Add audio element -->
+    <audio id="bgMusic" loop>
+        <source src="assets/img/One d new song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Add audio control button -->
+    <div id="audioControls">
+        <i class='bx bx-volume-full'></i>
+    </div>
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -732,6 +742,30 @@ Applications,December 2024.
     <script src="assets/js/main.js"></script>
 
     <script src="assets/js/typewriter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bgMusic');
+            const audioControls = document.getElementById('audioControls');
+            const audioIcon = audioControls.querySelector('i');
+
+            // Try to play audio on page load
+            audio.play().catch(function(error) {
+                console.log("Audio autoplay prevented");
+                audioIcon.className = 'bx bx-volume-mute';
+            });
+
+            // Toggle audio on button click
+            audioControls.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                    audioIcon.className = 'bx bx-volume-full';
+                } else {
+                    audio.pause();
+                    audioIcon.className = 'bx bx-volume-mute';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -318,6 +318,27 @@ body.light-theme {
   margin-bottom: 0.25rem;
 }
 
+#audioControls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+#audioControls:hover {
+  background: rgba(239, 236, 48, 0.8);
+}
+
 .home__education {
   color: var(--text-color);
   margin-bottom: 2.5rem;
