@@ -336,7 +336,7 @@ body.light-theme {
   transition: all 0.3s ease;
 }
 #audioControls:hover {
-  background: rgba(239, 236, 48, 0.8);
+  background: rgba(15, 21, 32, 0.8);
 }
 
 .home__education {
